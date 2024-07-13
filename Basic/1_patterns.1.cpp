@@ -323,35 +323,45 @@ void print20(int n)
 }
 
 void print21(int n){
-    int star =2;
-    int space =0;
-    for(int i=1;i<=n;i++){
-        if(i==1||i==n) 
-        {
-            star=n;
-            space=0;
-        }else {
-            star=2;
-            space= n-2;
-        }
-        // star
-        for(int j=1;j<=star-1;j++){
-            cout<<"* ";
+    // int star =2;
+    // int space =0;
+    // for(int i=1;i<=n;i++){
+    //     if(i==1||i==n) 
+    //     {
+    //         star=n;
+    //         space=0;
+    //     }else {
+    //         star=2;
+    //         space= n-2;
+    //     }
+    //     // star
+    //     for(int j=1;j<=star-1;j++){
+    //         cout<<"* ";
             
-        }
-        // space
-        for(int j=1;j<=space;j++){
-            cout<<"  ";
+    //     }
+    //     // space
+    //     for(int j=1;j<=space;j++){
+    //         cout<<"  ";
             
-        }
-        // star
-        for(int j=1;j==1;j++){
+    //     }
+    //     // star
+    //     for(int j=1;j==1;j++){
 
-            cout<<"* ";
-        }
+    //         cout<<"* ";
+    //     }
             
         
 
+    //     cout<<endl;
+    // }
+
+    // method -2
+    for(int i=1;i<=n;i++){
+        for(int j=1; j<=n;j++){
+            if(i==1 ||j==1|| i==n||j==n) cout<<"* ";
+            else cout<<"  ";
+
+        }
         cout<<endl;
     }
 }
