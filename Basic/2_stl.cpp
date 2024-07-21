@@ -2,6 +2,20 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// boolean function that retunrs trueand false
+bool comp(pair<int,int> p1, pair<int,int> p2){
+
+    // for increasing
+    if(p1.second<p2.second) return true;
+    if(p1.second>p1.second) return false;
+
+    else{
+        if(p1.first>p2.first) return true;
+        return false;
+    }
+    
+}
+
 int main()
 {
 
@@ -233,9 +247,38 @@ int main()
 
     // ! ___________________ unordered map
     // unique key in unsorted manner.
+
+    // ? ********************************** ALGORITHM
+    cout<<"***************************Algorithm*****************************"<<endl;
+    // !__________________sort
+    vector <int> v10={1,3,5,2};
     
+    // increasing
+    //  sort(v10.begin(),v10.end());
+    
+    // parital sort
+    // sort(v10.begin()+2,v10.begin()+4);
+
+    // decreasing
+    // sort(v10.begin(),v10.end(),greater <int>());
+
+    for(auto i:v10){
+        cout<<i<<" ";
+    }
+    cout<<endl;
+    // custom way of sort
+    // sort in increasing manner as per second element
+    // if second same , sort in decraseing order as per 1st element
+    pair<int,int> pa[]={{1,2},{2,1},{4,1}};
+
+    sort(pa,pa+3,comp);
+
+
+    for(auto i:pa){
+        cout<<i.first<<", "<<i.second<<" : ";
+    }
+    cout<<endl;
+
 
     return 0;   
 }
-
-
