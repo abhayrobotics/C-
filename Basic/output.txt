@@ -1,3 +1,11 @@
 1 & 3
 1 & 2 & 3
 5
+3
+v2[0].first- 2
+100
+*(x) - 2
+2 3 4 5 using normal loop
+2 3 4 5 normal variable short syntax
+2 3 4 5 -  using iterator
+2 using short cut iterator
