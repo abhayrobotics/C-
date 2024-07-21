@@ -291,13 +291,14 @@ void print19(int n)
 
 void print20(int n)
 {
-        int space =2*n-2;
+    int space = 2 * n - 2;
     for (int i = 1; i <= 2 * n - 1; i++)
     {
         int star = i;
-        if (i > n){
+        if (i > n)
+        {
             star = 2 * n - i;
-            space= 2*(i-n);
+            space = 2 * (i - n);
         }
         // star
         for (int j = 1; j <= star; j++)
@@ -306,27 +307,30 @@ void print20(int n)
         }
 
         // space
-        for(int j=1;j<=space;j++){
-            cout<<"  ";
-            
+        for (int j = 1; j <= space; j++)
+        {
+            cout << "  ";
         }
-        if(i<=n) space=space-2;
-            else space=space+2;
+        if (i <= n)
+            space = space - 2;
+        else
+            space = space + 2;
 
-       // star
+        // star
         for (int j = 1; j <= star; j++)
         {
             cout << "* ";
         }
-        cout<<endl;
+        cout << endl;
     }
 }
 
-void print21(int n){
+void print21(int n)
+{
     // int star =2;
     // int space =0;
     // for(int i=1;i<=n;i++){
-    //     if(i==1||i==n) 
+    //     if(i==1||i==n)
     //     {
     //         star=n;
     //         space=0;
@@ -337,49 +341,65 @@ void print21(int n){
     //     // star
     //     for(int j=1;j<=star-1;j++){
     //         cout<<"* ";
-            
+
     //     }
     //     // space
     //     for(int j=1;j<=space;j++){
     //         cout<<"  ";
-            
+
     //     }
     //     // star
     //     for(int j=1;j==1;j++){
 
     //         cout<<"* ";
     //     }
-            
-        
 
     //     cout<<endl;
     // }
 
     // method -2
-    for(int i=1;i<=n;i++){
-        for(int j=1; j<=n;j++){
-            if(i==1 ||j==1|| i==n||j==n) cout<<"* ";
-            else cout<<"  ";
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n; j++)
+        {
+            if (i == 1 || j == 1 || i == n || j == n)
+                cout << "* ";
+            else
+                cout << "  ";
+        }
+        cout << endl;
+    }
+}
 
+void print22(int n)
+{
+    // min distance from 4 corners
+    for (int i = 0; i < 2 * n - 1; i++)
+    {
+        int currentNum = 0;
+        for (int j = 0; j < 2 * n - 1; j++)
+        {
+
+            currentNum = min(min(i, j), min(2 * n - i - 2, 2 * n - j - 2));
+            cout << n - currentNum;
         }
         cout<<endl;
     }
 }
-int main()
-{
-    int t;
-    cin >> t;
-    for (int i = 0; i < t; i++)
+    int main()
     {
-        int n;
-        cin >> n;
-        // print1(n);
-        // print7(n);
-        // print8(n);
-        // print10(n);
-        print21(n);
-    }
-    
+        int t;
+        cin >> t;
+        for (int i = 0; i < t; i++)
+        {
+            int n;
+            cin >> n;
+            // print1(n);
+            // print7(n);
+            // print8(n);
+            // print10(n);
+            print22(n);
+        }
 
-    return 0;
-}
+        return 0;
+    }
