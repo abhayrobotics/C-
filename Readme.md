@@ -1,4 +1,4 @@
-# Set UP input.txt and output.txt  
+# Set Up input.txt and output.txt  
 
 -   open that folder in which input.txt and output.txt is present
 -   Delete any file in .vscode folder.
