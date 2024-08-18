@@ -135,7 +135,44 @@ void factors(int N)
     // cout<<endl;
 }
 
-// 7
+// 7 prime nos
+void prime(int n){
+    // brute force
+    int count =0;
+    for(int i=1;i<=n;i++){
+        if(n%i==0){
+            count++;
+
+        }
+    }
+    if(count==2){
+        cout<<n<<" is a prime no."<<endl;
+    }
+    else{
+        cout<<n<<" is not a prime no."<<endl;
+
+    }
+
+    // optimum approch
+    int cnt2 =0;
+    for(int j= 1;j*j<=n;j++){
+        if(n%j==0){
+            cnt2++;
+            if(n/j!=j){
+                cnt2++;
+            }
+        }
+    }
+     if(cnt2==2){
+        cout<<n<<" is a prime no."<<endl;
+    }
+    else{
+        cout<<n<<" is not a prime no."<<endl;
+
+    }
+
+}
+
 int main()
 {
     int x, y;
@@ -146,16 +183,7 @@ int main()
     // cout<<gcf(x,y);
     // cout << armstrong(x);
     // factors(x);
-    do{
-        cout<< "Enter a number"<<endl;
-
-    }
-    
-    while(false);
-    {
-        cout<<"yoyo";
-         
-    }
+    prime(x);
 
     return 0;
 }

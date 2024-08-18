@@ -83,3 +83,9 @@
     #include <utility>      // Utility components (e.g., std::pair)
 
 - Now using <bits/stdc++.h> will include all libraies required.
+
+
+
+# 4. Resursion
+-   Print nos 1 to 10 without loop using recursion
+-   
