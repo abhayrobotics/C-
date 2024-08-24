@@ -75,24 +75,26 @@ int factorial(int N)
 
 void reverse(int i, int N, vector<int> &arr)
 {
+    cout<<"loop "<<i<<endl;
 
-    if (i >N / 2)
+    if (i >= N / 2)
     {
-        cout<<"exit";
+        cout << "exit";
         return;
     }
     cout << arr[i] << " " << arr[N - i - 1] << endl;
     swap(arr[i], arr[N - i - 1]);
-    cout << "Rev" << arr[i] << " " << arr[N - i - 1] << endl;
+    cout << "Rev" << i<<" "<<arr[i] << " " << arr[N - i - 1] << endl;
 
     reverse(i + 1, N, arr);
+    return;
 }
 int main()
 {
 
     int N;
     cin >> N;
-
+    cout<< " check";
     // printNos(N);
     // printName(1,N);
 
@@ -110,10 +112,12 @@ int main()
     // cout <<factorial(N);
 
     // reverse a no.
-    vector<int> arr{N};
+    vector<int> arr(N);
+    
     for (int i = 0; i < N; i++)
     {
         cin >> arr[i];
+        // cout<<arr[i];
     }
     reverse(0, N, arr);
     cout << "loop end";

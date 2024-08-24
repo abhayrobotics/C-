@@ -1,10 +1,14 @@
+ checkloop 0
 1 9
-Rev9 1
+Rev0 9 1
+loop 1
 2 8
-Rev8 2
+Rev1 8 2
+loop 2
 3 7
-Rev7 3
+Rev2 7 3
+loop 3
 4 5
-Rev5 4
-4 5
-Rev5 4
+Rev3 5 4
+loop 4
+exitloop end9 8 7 5 4 3 2 1 
