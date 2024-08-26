@@ -89,6 +89,10 @@ void reverse(int i, int N, vector<int> &arr)
     reverse(i + 1, N, arr);
     return;
 }
+
+void palindrome(int i,vector <int> & arr2){
+    
+}
 int main()
 {
 
