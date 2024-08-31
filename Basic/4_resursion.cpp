@@ -118,6 +118,12 @@ void palindrome(int i,int N ,vector <char> & arr2){
     
 
 }
+ int Fibonacci(int n){
+        if(n==0) return 0;
+        if(n==1) return 1;
+        
+        return Fibonacci(n-1) +Fibonacci(n-2);
+    }
 
 
 int main()
@@ -161,14 +167,15 @@ int main()
 
     // ************ Palindrome
 
-    vector<char> arr(N);
+    // vector<char> arr(N);
    
-    for (int i = 0; i < N; i++)
-    {
-        cin >> arr[i];
-        // cout<<arr[i];
-    }
-    palindrome(0,N,arr);
+    // for (int i = 0; i < N; i++)
+    // {
+    //     cin >> arr[i];
+    //     // cout<<arr[i];
+    // }
+    // palindrome(0,N,arr);
+    cout<<Fibonacci(N);
 
     return 0;
 }
