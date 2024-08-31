@@ -89,10 +89,37 @@ void reverse(int i, int N, vector<int> &arr)
     reverse(i + 1, N, arr);
     return;
 }
+void reverseStr(int i,int N, vector<char> &arr) {
+    if(i>=N/2) return;
 
-void palindrome(int i,vector <int> & arr2){
+    swap(arr[i],arr[N-i-1]);
+
+    reverseStr(i+1,N,arr);
     
 }
+
+
+void palindrome(int i,int N ,vector <char> & arr2){
+    
+    vector <char> OriginalArray = arr2;
+    // for (int i = 0; i < N; i++)
+    // {
+    //     cout << arr2[i] << " ";
+    // }
+    reverseStr(0,N,arr2);
+    if(arr2 == OriginalArray){
+        cout<< " Its a Palindrome";
+    }
+    else{
+        cout<< " Its not a Palindrome";
+
+    }
+   
+    
+
+}
+
+
 int main()
 {
 
@@ -134,7 +161,14 @@ int main()
 
     // ************ Palindrome
 
-    
+    vector<char> arr(N);
+   
+    for (int i = 0; i < N; i++)
+    {
+        cin >> arr[i];
+        // cout<<arr[i];
+    }
+    palindrome(0,N,arr);
 
     return 0;
 }
