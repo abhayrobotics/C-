@@ -7,7 +7,7 @@ int main()
 
     // input.txt
     //     5
-    // 1 2 3 2 1 
+    // 1 2 3 2 1
     // 5
     // 2
     // 3
@@ -28,31 +28,45 @@ int main()
     int query;
     cin >> query;
     // initailizing the vector with 0 values, for 1-12 , we take 13
-    vector<int> hash(13,0);
-
-
+    vector<int> hash(13, 0);
 
     //****************** */ Prestoring
 
     for (int i = 0; i < n; i++)
     {
         // incrementing the value of hash index for which the value is present
-       
+
         hash[arr[i]]++;
     }
 
-    
-    while (query > 0){
+    while (query > 0)
+    {
         int x;
-        cin>>x ;
+        cin >> x;
         // fetching the value of hash index
-        cout<<hash[x];
+        cout << hash[x] << endl;
 
         query--;
-   }
-    int hash2[2]={0};
-    cout<<'a';
+    }
 
+    // **************************** optimized way - Using Map
+    cout << "Using Map" << endl;
+    // RAther than storing full length array , we store tonly the value that appear
+    map<int, int> mp1;
 
-return 0;
+    // precompute
+    for (int i; i < n; i++)
+    {
+        mp1[arr[i]]++;
+    }
+    // fetch( comment the upper inpur for fetching to use)
+    for (int i; i < n; i++)
+    {
+        int x;
+        cin >> x;
+        // fetching
+        cout << mp1[x] << endl;
+    }
+
+    return 0;
 }
