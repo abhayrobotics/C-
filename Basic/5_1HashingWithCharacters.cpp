@@ -38,8 +38,30 @@ int main() {
         cout<< arr[x-'a']<<endl;
     }
 
-// optimised Way using Map
+//*********************************** */ optimised Way using Map
+cout <<"USing Map"<<endl;
+map<char,int> mp2;
 
+// precompute
+for(int i;i<query1.size();i++){
+    mp2[query1[i]]++;
+
+}
+// Fetching;
+    int n2;
+    
+    cin>>n2;
+    for(int i=0;i<n2;i++){
+        char x;
+        cin>>x;
+        cout<< mp2[x]<<endl;
+    }
+
+// Visualing Map
+ for (auto it:mp2){
+    cout<<it.first<<"--> " <<it.second<<endl;
+ }
+    
 
     return 0;
 }
