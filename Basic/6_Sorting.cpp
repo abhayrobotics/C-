@@ -36,9 +36,6 @@ void bubbleSort(int arr[],int n){
                 cout<<"swap ";
                 didSwap =1;
             }
-           
-           
-
         }
          // if no swap happens in 1st loop
             if(didSwap==0){
@@ -46,6 +43,28 @@ void bubbleSort(int arr[],int n){
             }
         cout<<endl;
     }
+
+}
+
+void insertionSort(int arr[],int n){
+
+for(int i=0;i<n;i++){
+    int j=i;
+    while(j>0 && arr[j] < arr[j-1]){
+        // swap
+        int temp;
+        temp =arr[j-1];
+        arr[j-1]=arr[j];
+        arr[j]= temp;
+
+
+        j--;
+    }
+}
+
+}
+
+void mergeSort(int arr [],int n){
 
 }
 
@@ -58,7 +77,9 @@ int main() {
         cin>>arr[i];
     }
     // selection_Sort(arr, n);
-    bubbleSort(arr,n);
+    // bubbleSort(arr,n);
+    // insertionSort(arr,n);
+    mergeSort(arr,n);
 
     for(int i=0;i<n;i++){
         cout<<arr[i]<<" ";
